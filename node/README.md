@@ -126,7 +126,7 @@ This file holds your last action's required parameters and will spare you from r
 - `ENV0_API_SECRET`
 - `ENV0_ORGANIZATION_ID`
 - `ENV0_PROJECT_ID`
-- `ENV0_BLUEPRINT_ID`
+- `ENV0_TEMPLATE_ID`
 - `ENV0_ENVIRONMENT_NAME`
 
 ## API Reference
