@@ -78,7 +78,7 @@ The order of precedence of the arguments is:
 
 ### Blueprint ID
 > The Blueprint ID you would like to deploy with (Required for new environments)
-- Usage: `--blueprintId`
+- Usage: `--templateId`
 - Alias: `-b`
 
 ### Environment Name
@@ -141,3 +141,5 @@ You can compile and run the CLI from source by cloning the repo from Github and 
 yarn install
 yarn link # link your local copy of the CLI to your terminal path
 ```
+
+# Tim Update Branch 
