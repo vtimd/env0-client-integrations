@@ -76,9 +76,9 @@ The order of precedence of the arguments is:
 - Usage: `--projectId`
 - Alias: `-p`
 
-### Blueprint ID
-> The Blueprint ID you would like to deploy with (Required for new environments)
-- Usage: `--blueprintId`
+### Template ID
+> The Template ID you would like to deploy with (Required for new environments)
+- Usage: `--templateId`
 - Alias: `-b`
 
 ### Environment Name

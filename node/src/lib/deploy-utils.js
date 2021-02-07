@@ -7,7 +7,7 @@ const {
   API_KEY,
   API_SECRET,
   REQUIRES_APPROVAL,
-  BLUEPRINT_ID,
+  TEMPLATE_ID,
   REVISION,
   TARGETS,
   ENVIRONMENT_NAME,
@@ -42,8 +42,8 @@ class DeployUtils {
       workspaceName: options[WORKSPACE_NAME],
       projectId: options[PROJECT_ID],
       deployRequest: {
-        blueprintId: options[BLUEPRINT_ID],
-        blueprintRevision: options[REVISION]
+        templateId: options[TEMPLATE_ID],
+        templateRevision: options[REVISION]
       },
       configurationChanges,
       requiresApproval: convertStringToBoolean(options[REQUIRES_APPROVAL])
@@ -64,7 +64,7 @@ class DeployUtils {
     logger.info('Starting to deploy environment...');
 
     const payload = removeEmptyValuesFromObj({
-      blueprintRevision: options[REVISION],
+      templateRevision: options[REVISION],
       userRequiresApproval: convertStringToBoolean(options[REQUIRES_APPROVAL]),
       targets: options[TARGETS],
       configurationChanges

@@ -10,7 +10,7 @@ jest.mock('../../src/lib/api-client', () =>
   }))
 );
 
-const { BLUEPRINT_ID, REVISION, REQUIRES_APPROVAL, TARGETS, ENVIRONMENT_NAME, PROJECT_ID } = options;
+const { TEMPLATE_ID, REVISION, REQUIRES_APPROVAL, TARGETS, ENVIRONMENT_NAME, PROJECT_ID } = options;
 
 const mockDeploymentId = 'deployment0';
 const mockDeployment = { id: mockDeploymentId };
@@ -144,7 +144,7 @@ describe('deploy utils', () => {
     it('should call api with proper options', async () => {
       const mockOptions = {
         [REVISION]: 'rev0',
-        [BLUEPRINT_ID]: 'blueprint0',
+        [TEMPLATE_ID]: 'template0',
         [ENVIRONMENT_NAME]: 'foo',
         [PROJECT_ID]: 'proj0',
         [REQUIRES_APPROVAL]: 'true'
@@ -156,8 +156,8 @@ describe('deploy utils', () => {
         name: mockOptions[ENVIRONMENT_NAME],
         projectId: mockOptions[PROJECT_ID],
         deployRequest: {
-          blueprintId: mockOptions[BLUEPRINT_ID],
-          blueprintRevision: mockOptions[REVISION]
+          templateId: mockOptions[TEMPLATE_ID],
+          templateRevision: mockOptions[REVISION]
         },
         configurationChanges,
         requiresApproval: true
@@ -187,7 +187,7 @@ describe('deploy utils', () => {
 
       expect(mockCallApi).toHaveBeenCalledWith('post', `environments/${mockEnvironment.id}/deployments`, {
         data: {
-          blueprintRevision: mockOptions[REVISION],
+          templateRevision: mockOptions[REVISION],
           targets: mockOptions[TARGETS],
           configurationChanges
         }
