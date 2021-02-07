@@ -45,8 +45,7 @@ const commands = {
     help: [
       {
         desc: 'Configures env0 CLI options',
-        example: `$ env0 configure -k <${API_KEY}> -s <${API_SECRET}> -o <${ORGANIZATION_ID}> -p <${PROJECT_ID}> -e <${ENVIRONMENT_NAME}> -b <${TEMPLATE
-          _ID}>`
+        example: `$ env0 configure -k <${API_KEY}> -s <${API_SECRET}> -o <${ORGANIZATION_ID}> -p <${PROJECT_ID}> -e <${ENVIRONMENT_NAME}> -b <${TEMPLATE_ID}>`
       },
       {
         desc: 'Interactively configures env0 CLI options\n',
